@@ -1,0 +1,20 @@
+@use "../../mixins.scss" as *;
+
+.ActionPlan {
+  border: 1px solid var(--border);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 1000;
+  height: fit-content;
+  width: 75%;
+  padding: 40px;
+  background-color: var(--bg, #fff);
+  opacity: 1;
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+}

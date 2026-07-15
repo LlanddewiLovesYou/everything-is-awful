@@ -1,3 +1,5 @@
+@use "../../mixins.scss" as *;
+
 .Question {
   display: flex;
   flex-direction: column;
@@ -10,14 +12,7 @@
     max-width: 75%;
   }
   button {
-    background: var(--bg);
-    color: var(--text);
-    border: 1px solid var(--border);
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: large;
-    border-radius: 5px;
-    cursor: pointer;
+    @include plain-button-styles;
     &.yes {
       color: var(--yes-text);
       border: 1px solid var(--yes-text);

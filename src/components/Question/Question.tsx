@@ -5,9 +5,14 @@ import "./Question.scss";
 interface Props {
   question: number;
   setQuestion: React.Dispatch<React.SetStateAction<number>>;
+  setActionPlan: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-export const Question: React.FC<Props> = ({ question, setQuestion }) => {
+export const Question: React.FC<Props> = ({
+  question,
+  setQuestion,
+  setActionPlan,
+}) => {
   const [answeredNo, setAnsweredNo] = useState(false);
   const currentQuestion = selfCareQuestions[question];
 
@@ -27,7 +32,13 @@ export const Question: React.FC<Props> = ({ question, setQuestion }) => {
           </button>
         )}
         {currentQuestion.buttons.no && (
-          <button className="no" onClick={() => setAnsweredNo(true)}>
+          <button
+            className="no"
+            onClick={() => {
+              setAnsweredNo(true);
+              setActionPlan((prev) => [...prev, currentQuestion.intervention]);
+            }}
+          >
             No
           </button>
         )}

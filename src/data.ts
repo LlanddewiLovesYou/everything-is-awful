@@ -11,7 +11,7 @@ export const selfCareQuestions = [
   },
   {
     question: "Are you hydrated?",
-    intervention: "If not, have a glass of water.",
+    intervention: "Have a glass of water.",
     buttons: {
       yes: true,
       no: true,
@@ -20,7 +20,7 @@ export const selfCareQuestions = [
   {
     question: "Have you eaten in the past three hours?",
     intervention:
-      "If not, get some food — something with protein, not just simple carbs. Perhaps some nuts or hummus?",
+      "Get some food — something with protein, not just simple carbs. Perhaps some nuts or hummus?",
     buttons: {
       yes: true,
       no: true,
@@ -28,7 +28,7 @@ export const selfCareQuestions = [
   },
   {
     question: "Have you showered in the past day?",
-    intervention: "If not, take a shower right now.",
+    intervention: "Take a shower right now.",
     buttons: {
       yes: true,
       no: true,
@@ -37,7 +37,7 @@ export const selfCareQuestions = [
   {
     question: "Have you stretched your legs in the past day?",
     intervention:
-      "If not, do so right now. If you don’t have the energy for a run or trip to the gym, just walk around the block, then keep walking as long as you please. If the weather’s crap, drive to a big box store (e.g. Target) and go on a brisk walk through the aisles you normally skip.",
+      "Stretch your legs right now. If you don’t have the energy for a run or trip to the gym, just walk around the block, then keep walking as long as you please. If the weather’s crap, drive to a big box store (e.g. Target) and go on a brisk walk through the aisles you normally skip.",
     buttons: {
       yes: true,
       no: true,
@@ -46,7 +46,7 @@ export const selfCareQuestions = [
   {
     question: "Have you said something nice to someone in the past day?",
     intervention:
-      "Do so, whether online or in person. Make it genuine; wait until you see something really wonderful about someone, and tell them about it.",
+      "Say something nice to someone, whether online or in person. Make it genuine; wait until you see something really wonderful about someone, and tell them about it.",
     buttons: {
       yes: true,
       no: true,
@@ -55,7 +55,7 @@ export const selfCareQuestions = [
   {
     question: "Have you moved your body to music in the past day?",
     intervention:
-      "If not, jog for the length of an EDM song at your favorite tempo, or just dance around the room for the length of an upbeat song.",
+      "Jog for the length of an EDM song at your favorite tempo, or just dance around the room for the length of an upbeat song.",
     buttons: {
       yes: true,
       no: true,
@@ -64,7 +64,7 @@ export const selfCareQuestions = [
   {
     question: "Have you cuddled a living being in the past two days?",
     intervention:
-      "If not, do so. Don’t be afraid to ask for hugs from friends or friends’ pets. Most of them will enjoy the cuddles too; you’re not imposing on them.",
+      "Find a person or pet to cuddle. Don’t be afraid to ask for hugs from friends or friends’ pets. Most of them will enjoy the cuddles too; you’re not imposing on them.",
     buttons: {
       yes: true,
       no: true,
@@ -73,7 +73,7 @@ export const selfCareQuestions = [
   {
     question: "Have you seen a therapist in the past few days?",
     intervention:
-      "If not, hang on until your next therapy visit and talk through things then.",
+      "Hang on until your next therapy visit and talk through things then.",
     buttons: {
       yes: true,
       no: true,
@@ -83,7 +83,7 @@ export const selfCareQuestions = [
     question:
       "Have you changed any of your medications in the past couple of weeks, including skipped doses or a change in generic prescription brand?",
     intervention:
-      "That may be screwing with your head. Give things a few days, then talk to your doctor if it doesn’t settle down.",
+      "Changing Medications may be screwing with your head. Give things a few days, then talk to your doctor if it doesn’t settle down.",
     buttons: {
       yes: true,
       no: true,
@@ -92,7 +92,7 @@ export const selfCareQuestions = [
   {
     question: "If daytime: are you dressed?",
     intervention:
-      "If not, put on clean clothes that aren’t pajamas. Give yourself permission to wear something special, whether it’s a funny t-shirt or a pretty dress.",
+      "Put on clean clothes that aren’t pajamas. Give yourself permission to wear something special, whether it’s a funny t-shirt or a pretty dress.",
     buttons: {
       yes: true,
       no: true,
@@ -139,7 +139,7 @@ export const selfCareQuestions = [
     question:
       "Have you over-exerted yourself lately — physically, emotionally, socially, or intellectually?",
     intervention:
-      "That can take a toll that lingers for days. Give yourself a break in that area, whether it’s physical rest, taking time alone, or relaxing with some silly entertainment.",
+      "Overexertion can take a toll that lingers for days. Give yourself a break in that area, whether it’s physical rest, taking time alone, or relaxing with some silly entertainment.",
     buttons: {
       yes: true,
       no: true,
@@ -148,7 +148,7 @@ export const selfCareQuestions = [
   {
     question: "Have you waited a week?",
     intervention:
-      "Sometimes our perception of life is skewed, and we can’t even tell that we’re not thinking clearly, and there’s no obvious external cause. It happens. Keep yourself going for a full week, whatever it takes, and see if you still feel the same way then.",
+      "Wait a week. Sometimes our perception of life is skewed, and we can’t even tell that we’re not thinking clearly, and there’s no obvious external cause. It happens. Keep yourself going for a full week, whatever it takes, and see if you still feel the same way then.",
     buttons: {
       yes: true,
       no: true,

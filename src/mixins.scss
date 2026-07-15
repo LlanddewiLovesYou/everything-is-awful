@@ -1,0 +1,10 @@
+@mixin plain-button-styles {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: large;
+  border-radius: 5px;
+  cursor: pointer;
+}
