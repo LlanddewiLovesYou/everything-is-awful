@@ -1,0 +1,14 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: xx-large;
+  font-weight: 500;
+  margin-bottom: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  .toggle {
+    display: flex;
+    font-size: medium;
+  }
+}

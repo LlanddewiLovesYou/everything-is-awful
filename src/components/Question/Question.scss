@@ -1,0 +1,34 @@
+.Question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    margin: 20px 0;
+    line-height: 1.2;
+    color: var(--text);
+    background: var(--bg);
+    max-width: 75%;
+  }
+  button {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: large;
+    border-radius: 5px;
+    cursor: pointer;
+    &.yes {
+      color: var(--yes-text);
+      border: 1px solid var(--yes-text);
+    }
+    &.no {
+      color: var(--no-text);
+      border: 1px solid var(--no-text);
+    }
+    &:disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+  }
+}

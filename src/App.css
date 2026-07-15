@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+.App {
+  background-color: var(--bg);
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
