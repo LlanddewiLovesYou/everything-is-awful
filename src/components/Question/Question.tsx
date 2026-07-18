@@ -13,43 +13,65 @@ export const Question: React.FC<Props> = ({
   setQuestion,
   setActionPlan,
 }) => {
-  const [answeredNo, setAnsweredNo] = useState(false);
+  const [showIntervention, setShowIntervention] = useState(false);
   const currentQuestion = selfCareQuestions[question];
 
   const isLastQuestion = question === selfCareQuestions.length - 1;
+
+  const determineShowIntervention = (buttonName: string) => {
+    const showIntervention = buttonName === currentQuestion.showIntervention;
+
+    if (showIntervention) {
+      setShowIntervention(true);
+      if (currentQuestion.intervention) {
+        const intervention = currentQuestion.intervention;
+        setActionPlan((prev) => [...prev, intervention]);
+      }
+    } else {
+      setQuestion((prev) => prev + 1);
+    }
+  };
 
   return (
     <div className="Question">
       <p>{currentQuestion.question}</p>
       <div>
-        {currentQuestion.buttons.yes && (
+        {currentQuestion.buttons?.yes && (
           <button
-            onClick={() => setQuestion((prev) => prev + 1)}
-            disabled={answeredNo}
+            onClick={() => determineShowIntervention("yes")}
+            disabled={
+              showIntervention && currentQuestion.showIntervention === "no"
+            }
             className="yes"
           >
             Yes
           </button>
         )}
-        {currentQuestion.buttons.no && (
+        {currentQuestion.buttons?.no && (
           <button
             className="no"
             onClick={() => {
-              setAnsweredNo(true);
-              setActionPlan((prev) => [...prev, currentQuestion.intervention]);
+              determineShowIntervention("no");
+              if (currentQuestion.intervention) {
+                const intervention = currentQuestion.intervention;
+                setActionPlan((prev) => [...prev, intervention]);
+              }
             }}
+            disabled={
+              showIntervention && currentQuestion.showIntervention === "yes"
+            }
           >
             No
           </button>
         )}
       </div>
-      {answeredNo && (
+      {showIntervention && (
         <>
           <p>{currentQuestion.intervention}</p>
           <p>Still awful?</p>
           <button
             onClick={() => {
-              setAnsweredNo(false);
+              setShowIntervention(false);
               setQuestion((prev) => prev + 1);
             }}
           >
@@ -62,10 +84,10 @@ export const Question: React.FC<Props> = ({
           <p>{currentQuestion.intervention}</p>
         </>
       )}
-      {currentQuestion.buttons.continue && (
+      {currentQuestion.buttons?.continue && (
         <button
           onClick={() => {
-            setAnsweredNo(false);
+            setShowIntervention(false);
             setQuestion((prev) => prev + 1);
           }}
         >
@@ -75,7 +97,7 @@ export const Question: React.FC<Props> = ({
       {isLastQuestion && (
         <button
           onClick={() => {
-            setAnsweredNo(false);
+            setShowIntervention(false);
             setQuestion(0);
           }}
         >
