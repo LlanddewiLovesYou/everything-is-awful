@@ -10,6 +10,7 @@
   background-color: var(--bg);
   color: var(--text);
   .toggle {
+    height: 31px;
     display: flex;
     font-size: medium;
   }
@@ -38,6 +39,7 @@
     }
 
     .toggle {
+      margin: 16px 0;
       margin-left: auto;
     }
   }

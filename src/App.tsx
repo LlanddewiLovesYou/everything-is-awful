@@ -5,7 +5,12 @@ import { ContentDisplayArea } from "./components/ContentDisplayArea/ContentDispl
 import "./App.css";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  if (window.localStorage.getItem("EIA-darkMode") === null) {
+    window.localStorage.setItem("EIA-darkMode", "false");
+  }
+  const [isDarkMode, setIsDarkMode] = useState(
+    window.localStorage.getItem("EIA-darkMode") === "true" || false,
+  );
   const [actionPlan, setActionPlan] = useState([] as string[]);
   const [isActionPlanOpen, setIsActionPlanOpen] = useState(false);
   return (

@@ -29,6 +29,7 @@ export const Navbar: React.FC<Props> = ({
           <Switch
             onChange={() => {
               setIsDarkMode(!darkMode);
+              window.localStorage.setItem("EIA-darkMode", String(!darkMode));
             }}
             checked={darkMode}
             offColor="#000"
